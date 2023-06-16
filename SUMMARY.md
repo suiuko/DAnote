@@ -8,7 +8,7 @@
 
 ## numpy
 
-* [Page 1](numpy/page-1.md)
+* [创建数组](numpy/chuang-jian-shu-zu.md)
 
 ## pandas
 
