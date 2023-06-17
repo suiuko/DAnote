@@ -27,9 +27,7 @@ numpy.array(object,dtype = None, copy = True, order = None, subok = False, ndmin
 
 ### 用法
 
-#### 基础用法
-
-array(初始值，结束值-1，步长)
+#### np.array(初始值0，结束值-1，步长)
 
 <pre class="language-python"><code class="lang-python">import numpy as np 
 # 迭代对象
@@ -54,3 +52,14 @@ print (a)
 print(a.shape) # 纬度
 
 </code></pre>
+
+#### np.zeros(数组元素个数, dtype='类型')
+
+```python
+import numpy as np 
+a = np.zeros(10)
+print(a)
+```
+
+`zeros_like(a)` 函数能做出像a 一样纬度的 0 矩阵
+
