@@ -8,8 +8,8 @@
 
 ## numpy
 
-* [创建数组](numpy/chuang-jian-shu-zu.md)
 * [数据类型](numpy/shu-ju-lei-xing.md)
+* [创建数组](numpy/chuang-jian-shu-zu.md)
 
 ## pandas
 
