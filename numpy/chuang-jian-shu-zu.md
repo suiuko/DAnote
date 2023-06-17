@@ -6,6 +6,17 @@ NUMPY 定义了一个 N 维数组对象，他是一个一系列相同类型元�
 
 其对象采用了数组的索引机制，将数组中的每个元素映射到内存块上。
 
+ndarray 内部由以下内容组成：
+
+* 一个指向数据（内存或内存映射文件中的一块数据）的指针。
+* 数据类型或 dtype，描述在数组中的固定大小值的格子。
+* 一个表示数组形状（shape）的元组，表示各维度大小的元组。
+* 一个跨度元组（stride），其中的整数指的是为了前进到当前维度下一个元素需要"跨过"的字节数。
+
+ndarray 的内部结构:
+
+<figure><img src="../.gitbook/assets/ndarray1.png" alt=""><figcaption></figcaption></figure>
+
 ## array 创建数组
 
 ```python
@@ -20,7 +31,8 @@ numpy.array(object,dtype = None, copy = True, order = None, subok = False, ndmin
 
 array(初始值，结束值-1，步长)
 
-<pre class="language-python"><code class="lang-python"># 迭代对象
+<pre class="language-python"><code class="lang-python">import numpy as np 
+# 迭代对象
 np.array(range(10))
 <strong>>>> array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 </strong><strong>
@@ -32,5 +44,13 @@ array([ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81])
 # 取偶数
 np.array(range(2,11,2))
 #np.array([i for i in range(10) if i%2 == 0])
+
+# 最小维度  
+
+a = np.array([1, 2, 3, 4, 5], ndmin =  2)  
+print (a)
+>>> [[1 2 3 4 5]]
+
+print(a.shape) # 纬度
 
 </code></pre>
