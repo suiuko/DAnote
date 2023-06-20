@@ -6,6 +6,6 @@
 [wei-du-cao-zuo.md](wei-du-cao-zuo.md)
 {% endcontent-ref %}
 
-{% content-ref url="qie-pian-cao-zuo.md" %}
-[qie-pian-cao-zuo.md](qie-pian-cao-zuo.md)
+{% content-ref url="qie-pian-he-suo-yin-cao-zuo.md" %}
+[qie-pian-he-suo-yin-cao-zuo.md](qie-pian-he-suo-yin-cao-zuo.md)
 {% endcontent-ref %}
