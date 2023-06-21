@@ -2,9 +2,11 @@
 
 <details>
 
-<summary>快速查看目录</summary>
+<summary>目录</summary>
 
 [#yi-chuang-jian-ji-ben-shu-zu](chuang-jian-shu-zu.md#yi-chuang-jian-ji-ben-shu-zu "mention")
+
+[#er-cong-yi-you-de-shu-zu-chuang-jian-shu-zu](chuang-jian-shu-zu.md#er-cong-yi-you-de-shu-zu-chuang-jian-shu-zu "mention")
 
 [#san-cong-shu-zhi-fan-wei-chuang-jian-shu-zu](chuang-jian-shu-zu.md#san-cong-shu-zhi-fan-wei-chuang-jian-shu-zu "mention")
 
@@ -21,6 +23,8 @@ numpy.array(object,dtype = None, copy = True, order = None, subok = False, ndmin
 ```
 
 <table><thead><tr><th width="136">参数</th><th></th></tr></thead><tbody><tr><td>object</td><td>表示一个数组序列</td></tr><tr><td>dtype</td><td>可选参数，通过他可以更改数组的数据类型</td></tr><tr><td>copy</td><td>可选参数，当数据源是ndarray时表示数组能否被复制，默认 T</td></tr><tr><td>order</td><td>可选参数，以哪种内存布局创建数组。可选值：C(行序列)/F(列序列)/A(默认)</td></tr><tr><td>ndmin</td><td>可选参数，用于指定数组的纬度</td></tr><tr><td>subok</td><td>可选参数，类型为 bool 值，默认 false。为 True：使用 object 的内部数据类型；False：使用 object 数组的数据类型。</td></tr></tbody></table>
+
+> range( ) 默认从0 开始
 
 <pre class="language-python"><code class="lang-python">import numpy as np 
 # 迭代对象

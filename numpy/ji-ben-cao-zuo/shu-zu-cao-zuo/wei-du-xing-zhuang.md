@@ -1,4 +1,14 @@
-# 纬度操作
+# 纬度形状
+
+<details>
+
+<summary>目录</summary>
+
+[#1.-shi-tu-bian-wei-shu-ju-gong-xiang](wei-du-xing-zhuang.md#1.-shi-tu-bian-wei-shu-ju-gong-xiang "mention") reshape()  ravel() resize()&#x20;
+
+[#2.-fu-zhi-bian-wei-shu-ju-du-li-flatten](wei-du-xing-zhuang.md#2.-fu-zhi-bian-wei-shu-ju-du-li-flatten "mention")
+
+</details>
 
 ## 1. 视图变维（数据共享）&#x20;
 

@@ -10,6 +10,10 @@
 [qie-pian-he-suo-yin.md](qie-pian-he-suo-yin.md)
 {% endcontent-ref %}
 
+{% content-ref url="shu-zu-cao-zuo/" %}
+[shu-zu-cao-zuo](shu-zu-cao-zuo/)
+{% endcontent-ref %}
+
 {% content-ref url="yan-ma.md" %}
 [yan-ma.md](yan-ma.md)
 {% endcontent-ref %}
