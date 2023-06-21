@@ -14,6 +14,6 @@
 [shu-zu-cao-zuo](shu-zu-cao-zuo/)
 {% endcontent-ref %}
 
-{% content-ref url="yan-ma.md" %}
-[yan-ma.md](yan-ma.md)
+{% content-ref url="shu-zu-ji-suan/yan-ma.md" %}
+[yan-ma.md](shu-zu-ji-suan/yan-ma.md)
 {% endcontent-ref %}
