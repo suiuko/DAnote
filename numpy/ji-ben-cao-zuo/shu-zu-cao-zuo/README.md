@@ -14,6 +14,10 @@
 [x-shu-zu-yuan-su-jia-jian.md](x-shu-zu-yuan-su-jia-jian.md)
 {% endcontent-ref %}
 
-{% content-ref url="x-fan-zhuan-shu-zu.md" %}
-[x-fan-zhuan-shu-zu.md](x-fan-zhuan-shu-zu.md)
+{% content-ref url="fan-zhuan-shu-zu.md" %}
+[fan-zhuan-shu-zu.md](fan-zhuan-shu-zu.md)
+{% endcontent-ref %}
+
+{% content-ref url="die-dai-shu-zu-nditer.md" %}
+[die-dai-shu-zu-nditer.md](die-dai-shu-zu-nditer.md)
 {% endcontent-ref %}
