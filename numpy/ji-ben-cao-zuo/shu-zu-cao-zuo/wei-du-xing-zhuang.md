@@ -4,11 +4,23 @@
 
 <summary>目录</summary>
 
+修改形状
+
 [#1.-shi-tu-bian-wei-shu-ju-gong-xiang](wei-du-xing-zhuang.md#1.-shi-tu-bian-wei-shu-ju-gong-xiang "mention") reshape()  ravel() resize()&#x20;
 
 [#2.-fu-zhi-bian-wei-shu-ju-du-li-flatten](wei-du-xing-zhuang.md#2.-fu-zhi-bian-wei-shu-ju-du-li-flatten "mention")
 
 [#3.-flat](wei-du-xing-zhuang.md#3.-flat "mention")
+
+修改维度
+
+[#1.-broadcast](wei-du-xing-zhuang.md#1.-broadcast "mention")
+
+[#2.-broadcast\_to](wei-du-xing-zhuang.md#2.-broadcast\_to "mention")
+
+[#3.-expend\_dims](wei-du-xing-zhuang.md#3.-expend\_dims "mention")
+
+[#4.-squeeze](wei-du-xing-zhuang.md#4.-squeeze "mention")
 
 </details>
 
@@ -133,53 +145,216 @@ for element in a.flat:
 | `expand_dims`  | 扩展数组的形状       |
 | `squeeze`      | 从数组的形状中删除一维条目 |
 
-### 1. 广播 broadcast&#x20;
-
-广播(Broadcast)是 numpy 对不同形状(shape)的数组进行数值计算的方式， 对数组的算术运算通常在相应的元素上进行。
-
-如果两个数组 a 和 b 形状相同，即满足 **a.shape == b.shape**，那么 a\*b 的结果就是 a 与 b 数组对应位相乘。这要求维数相同，且各维度的长度相同。
-
-**广播的规则:**
-
-* 让所有输入数组都向其中形状最长的数组看齐，形状中不足的部分都通过在前面加 1 补齐。
-* 输出数组的形状是输入数组形状的各个维度上的最大值。
-* 如果输入数组的某个维度和输出数组的对应维度的长度相同或者其长度为 1 时，这个数组能够用来计算，否则出错。
-* 当输入数组的某个维度的长度为 1 时，沿着此维度运算时都用此维度上的第一组值。
-
-**简单理解：**对两个数组，分别比较他们的每一个维度（若其中一个数组没有当前维度则忽略），满足：
-
-* 数组拥有相同形状。
-* 当前维度的值相等。
-* 当前维度的值有一个是 1。
+### 1. broadcast&#x20;
 
 ```python
-import numpy as np 
+import numpy as np
  
-a = np.array([1,2,3,4]) 
-b = np.array([10,20,30,40]) 
-c = a * b 
+x = np.array([[1], [2], [3]])
+y = np.array([4, 5, 6])  
+ 
+# 对 y 广播 x
+b = np.broadcast(x,y)  
+# 它拥有 iterator 属性，基于自身组件的迭代器元组
+ 
+print ('对 y 广播 x：')
+r,c = b.iters
+ 
+# Python3.x 为 next(context) ，Python2.x 为 context.next()
+print (next(r), next(c))
+print (next(r), next(c))
+print ('\n')
+# shape 属性返回广播对象的形状
+ 
+print ('广播对象的形状：')
+print (b.shape)
+print ('\n')
+# 手动使用 broadcast 将 x 与 y 相加
+b = np.broadcast(x,y)
+c = np.empty(b.shape)
+ 
+print ('手动使用 broadcast 将 x 与 y 相加：')
+print (c.shape)
+print ('\n')
+c.flat = [u + v for (u,v) in b]
+ 
+print ('调用 flat 函数：')
 print (c)
+print ('\n')
+# 获得了和 NumPy 内建的广播支持相同的结果
+ 
+print ('x 与 y 的和：')
+print (x + y)
 
 >>>
-[ 10  40  90 160]
+对 y 广播 x：
+1 4
+1 5
+
+
+广播对象的形状：
+(3, 3)
+
+
+手动使用 broadcast 将 x 与 y 相加：
+(3, 3)
+
+
+调用 flat 函数：
+[[5. 6. 7.]
+ [6. 7. 8.]
+ [7. 8. 9.]]
+
+
+x 与 y 的和：
+[[5 6 7]
+ [6 7 8]
+ [7 8 9]]
+```
+
+### 2. broadcast\_to
+
+numpy.broadcast\_to 函数将数组广播到新形状。它在原始数组上返回只读视图。 它通常不连续。 如果新形状不符合 NumPy 的广播规则，该函数可能会抛出ValueError
+
+```
+numpy.broadcast_to(array, shape, subok)
 ```
 
 ```python
-# 当运算中的 2 个数组的形状不同时，numpy 将自动触发广播机制
-import numpy as np 
+import numpy as np
  
-a = np.array([[ 0, 0, 0],
-           [10,10,10],
-           [20,20,20],
-           [30,30,30]])
-b = np.array([0,1,2])
-print(a + b)
+a = np.arange(4).reshape(1,4)
+ 
+print ('原数组：')
+print (a)
+print ('\n')
+ 
+print ('调用 broadcast_to 函数之后：')
+print (np.broadcast_to(a,(4,4)))
 
 >>>
-[[ 0  1  2]
- [10 11 12]
- [20 21 22]
- [30 31 32]]
+原数组：
+[[0 1 2 3]]
+
+
+调用 broadcast_to 函数之后：
+[[0 1 2 3]
+ [0 1 2 3]
+ [0 1 2 3]
+ [0 1 2 3]]
 ```
 
-<figure><img src="../../../.gitbook/assets/image0020619.gif" alt=""><figcaption></figcaption></figure>
+### 3. expend\_dims
+
+numpy.expand\_dims 函数通过在指定位置插入新的轴来扩展数组形状，函数格式如下:
+
+```
+ numpy.expand_dims(arr, axis)
+```
+
+```python
+import numpy as np
+ 
+x = np.array(([1,2],[3,4]))
+ 
+print ('数组 x：')
+print (x)
+print ('\n')
+y = np.expand_dims(x, axis = 0)
+ 
+print ('数组 y：')
+print (y)
+print ('\n')
+ 
+print ('数组 x 和 y 的形状：')
+print (x.shape, y.shape)
+print ('\n')
+# 在位置 1 插入轴
+y = np.expand_dims(x, axis = 1)
+ 
+print ('在位置 1 插入轴之后的数组 y：')
+print (y)
+print ('\n')
+ 
+print ('x.ndim 和 y.ndim：')
+print (x.ndim,y.ndim)
+print ('\n')
+ 
+print ('x.shape 和 y.shape：')
+print (x.shape, y.shape)
+
+>>>
+数组 x：
+[[1 2]
+ [3 4]]
+
+
+数组 y：
+[[[1 2]
+  [3 4]]]
+
+
+数组 x 和 y 的形状：
+(2, 2) (1, 2, 2)
+
+
+在位置 1 插入轴之后的数组 y：
+[[[1 2]]
+
+ [[3 4]]]
+
+
+x.ndim 和 y.ndim：
+2 3
+
+
+x.shape 和 y.shape：
+(2, 2) (2, 1, 2)
+```
+
+### 4. squeeze
+
+numpy.squeeze 函数从给定数组的形状中删除一维的条目，函数格式如下：
+
+```
+numpy.squeeze(arr, axis)
+```
+
+参数说明：
+
+* `arr`：输入数组
+* `axis`：整数或整数元组，用于选择形状中一维条目的子集
+
+```python
+import numpy as np
+ 
+x = np.arange(9).reshape(1,3,3)
+ 
+print ('数组 x：')
+print (x)
+print ('\n')
+y = np.squeeze(x)
+ 
+print ('数组 y：')
+print (y)
+print ('\n')
+ 
+print ('数组 x 和 y 的形状：')
+print (x.shape, y.shape)
+
+>>>
+数组 x：
+[[[0 1 2]
+  [3 4 5]
+  [6 7 8]]]
+
+
+数组 y：
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+
+
+数组 x 和 y 的形状：
+(1, 3, 3) (3, 3)
+```

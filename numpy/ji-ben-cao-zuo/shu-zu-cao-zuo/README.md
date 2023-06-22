@@ -6,8 +6,8 @@
 [wei-du-xing-zhuang.md](wei-du-xing-zhuang.md)
 {% endcontent-ref %}
 
-{% content-ref url="x-lian-jie-he-fen-ge.md" %}
-[x-lian-jie-he-fen-ge.md](x-lian-jie-he-fen-ge.md)
+{% content-ref url="lian-jie-he-fen-ge.md" %}
+[lian-jie-he-fen-ge.md](lian-jie-he-fen-ge.md)
 {% endcontent-ref %}
 
 {% content-ref url="x-shu-zu-yuan-su-jia-jian.md" %}
