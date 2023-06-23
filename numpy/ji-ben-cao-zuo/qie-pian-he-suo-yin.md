@@ -28,7 +28,7 @@ description: ndarray数组切片操作
 
 ## ➡️ 普通索引
 
-ndarray数组可以基于 0-n 的<mark style="color:orange;">下标</mark>进行索引，切片对象可以通过内置的slice函数进行切片。
+ndarray数组可以基于 0-n 的<mark style="color:orange;">下标进行索引</mark>，切片对象可以通过内置的slice函数进行切片。
 
 ### 1. 一维数组切片
 

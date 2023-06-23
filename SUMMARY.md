@@ -15,7 +15,7 @@
 * [基本操作](numpy/ji-ben-cao-zuo/README.md)
   * [创建数组](numpy/ji-ben-cao-zuo/chuang-jian-shu-zu.md)
   * [切片和索引](numpy/ji-ben-cao-zuo/qie-pian-he-suo-yin.md)
-  * [三维数组位置](numpy/ji-ben-cao-zuo/san-wei-shu-zu-wei-zhi.md)
+  * [二/三维数组位置](numpy/ji-ben-cao-zuo/er-san-wei-shu-zu-wei-zhi.md)
   * [数组操作](numpy/ji-ben-cao-zuo/shu-zu-cao-zuo/README.md)
     * [维度形状](numpy/ji-ben-cao-zuo/shu-zu-cao-zuo/wei-du-xing-zhuang.md)
     * [翻转数组](numpy/ji-ben-cao-zuo/shu-zu-cao-zuo/fan-zhuan-shu-zu.md)

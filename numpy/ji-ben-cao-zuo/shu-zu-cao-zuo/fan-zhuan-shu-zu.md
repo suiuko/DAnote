@@ -1,5 +1,17 @@
 # 翻转数组
 
+<details>
+
+<summary>目录</summary>
+
+[#1.-transpose-arr-axes](fan-zhuan-shu-zu.md#1.-transpose-arr-axes "mention") 对换维度
+
+[#2.-rollaxis-arr-axis-start](fan-zhuan-shu-zu.md#2.-rollaxis-arr-axis-start "mention")
+
+[#3.-swapaxes-arr-axis1-axis2](fan-zhuan-shu-zu.md#3.-swapaxes-arr-axis1-axis2 "mention")
+
+</details>
+
 | 函数          | 描述                      |
 | ----------- | ----------------------- |
 | `transpose` | 对换数组的维度                 |
@@ -10,7 +22,7 @@
 ### 1. transpose(arr,axes)
 
 arr ：要操作的数组\
-axes ： 整数列表，对应纬度，通常所有纬度都会对换
+axes ： 整数列表，对应维度，通常所有维度都会对换
 
 `numpy.ndarray.T` 类似于 `numpy.transpose`&#x20;
 
