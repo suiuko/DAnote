@@ -10,8 +10,8 @@
 [lian-jie-he-fen-ge.md](lian-jie-he-fen-ge.md)
 {% endcontent-ref %}
 
-{% content-ref url="x-shu-zu-yuan-su-jia-jian.md" %}
-[x-shu-zu-yuan-su-jia-jian.md](x-shu-zu-yuan-su-jia-jian.md)
+{% content-ref url="shu-zu-yuan-su-jia-jian.md" %}
+[shu-zu-yuan-su-jia-jian.md](shu-zu-yuan-su-jia-jian.md)
 {% endcontent-ref %}
 
 {% content-ref url="fan-zhuan-shu-zu.md" %}

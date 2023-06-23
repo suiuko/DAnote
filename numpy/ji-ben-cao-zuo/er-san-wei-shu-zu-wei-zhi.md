@@ -2,9 +2,25 @@
 
 <details>
 
-<summary></summary>
+<summary>二维</summary>
 
+[#axis-0-lie-fang-xiang](er-san-wei-shu-zu-wei-zhi.md#axis-0-lie-fang-xiang "mention")
 
+[#axis-1-hang-fang-xiang](er-san-wei-shu-zu-wei-zhi.md#axis-1-hang-fang-xiang "mention")
+
+</details>
+
+<details>
+
+<summary>三维</summary>
+
+[#axis-zhou-yu-shu-zu-kuo-hao-de-dui-ying-guan-xi](er-san-wei-shu-zu-wei-zhi.md#axis-zhou-yu-shu-zu-kuo-hao-de-dui-ying-guan-xi "mention")
+
+[#axis-0](er-san-wei-shu-zu-wei-zhi.md#axis-0 "mention")
+
+[#axis-1-lie-fang-xiang](er-san-wei-shu-zu-wei-zhi.md#axis-1-lie-fang-xiang "mention")
+
+[#axis-2-hang-fang-xiang](er-san-wei-shu-zu-wei-zhi.md#axis-2-hang-fang-xiang "mention")
 
 </details>
 
