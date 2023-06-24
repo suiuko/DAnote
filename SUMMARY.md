@@ -25,6 +25,12 @@
   * [数组计算](numpy/ji-ben-cao-zuo/shu-zu-ji-suan/README.md)
     * [掩码 Mask](numpy/ji-ben-cao-zuo/shu-zu-ji-suan/yan-ma-mask.md)
     * [广播 broadcast](numpy/ji-ben-cao-zuo/shu-zu-ji-suan/guang-bo-broadcast.md)
+    * [位运算](numpy/ji-ben-cao-zuo/shu-zu-ji-suan/wei-yun-suan.md)
+  * [函数](numpy/ji-ben-cao-zuo/han-shu/README.md)
+    * [字符串函数 .char](numpy/ji-ben-cao-zuo/han-shu/zi-fu-chuan-han-shu-.char.md)
+    * [数学函数](numpy/ji-ben-cao-zuo/han-shu/shu-xue-han-shu.md)
+    * [算术函数](numpy/ji-ben-cao-zuo/han-shu/suan-shu-han-shu.md)
+    * [统计函数](numpy/ji-ben-cao-zuo/han-shu/tong-ji-han-shu.md)
 
 ## pandas
 
