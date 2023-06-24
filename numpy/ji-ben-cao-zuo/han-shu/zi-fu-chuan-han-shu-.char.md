@@ -23,3 +23,22 @@ description: 字符数组类 char
 
 ## np.char.add()
 
+numpy.char.add() 函数依次对两个数组的元素进行字符串连接。
+
+```python
+import numpy as np 
+ 
+print ('连接两个字符串：')
+print (np.char.add(['hello'],[' xyz']))
+print ('\n')
+ 
+print ('连接示例：')
+print (np.char.add(['hello', 'hi'],[' abc', ' xyz']))
+
+>>>
+连接两个字符串：
+['hello xyz']
+
+连接示例：
+['hello abc' 'hi xyz']
+```
