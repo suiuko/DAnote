@@ -156,7 +156,7 @@ print (np.stack((a,b),1))
   [7 8]]]
 ```
 
-### 3. 垂直方向 hstack - 水平堆叠
+### 3. 水平堆叠 hstack
 
 水平堆叠序列中的数组（列方向）
 
@@ -195,7 +195,7 @@ print ('\n')
  [3 4 7 8]]
 ```
 
-### 4. 水平方向 vstack - 垂直堆叠
+### 4. 垂直堆叠 vstack&#x20;
 
 垂直堆叠序列中的数组（行方向）
 
@@ -233,6 +233,22 @@ print (c)
  [3 4]
  [5 6]
  [7 8]]
+```
+
+### 5. 长度不相等的数组组合
+
+使用 `np.pad(b,pad_width=(0,1),mode='constant',constant_values=-1)` ： 补充 B 数组使其长度与 A 相同，头部补充 0 个元素，尾部补充 1 个元素，values=-1，则都补充元素为 -1
+
+```python
+import numpy as np
+a = np.array([1,2,3,4,5])
+b = np.array([1,2,3,4])
+
+b = np.pad(b,pad_width(0,1),mode='constant',constant_values=-1)
+print(b)
+
+c = np.vstack((a,b))
+print(c)
 ```
 
 ## &#x20;2. 分割数组
@@ -314,9 +330,9 @@ print(d)
        [14, 15]])]
 ```
 
-### hsplit()
+### hsplit() 竖着切
 
-用于水平分割数组，通过指定要返回的相同形状的数组数量来拆分原数组
+竖着切数组，通过指定要返回的相同形状的数组数量来拆分原数组
 
 ```python
 # hsplit 沿着水平分割数组
@@ -340,12 +356,11 @@ print(np.hsplit(harr, 3))
        [7., 5.]])]
 ```
 
-### vsplit()
+### vsplit()&#x20;
 
-用于水平分割数组，通过指定要返回的相同形状的数组数量来拆分原数组
+横着切数组，通过指定要返回的相同形状的数组数量来拆分原数组
 
 ```python
-# vsplit 沿着垂直分割数组
 import numpy as np
  
 a = np.arange(16).reshape(4,4)
