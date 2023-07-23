@@ -10,7 +10,11 @@
 
 [#numpy.percentile](tong-ji-han-shu.md#numpy.percentile "mention")百分位数
 
-[#numpy.median](tong-ji-han-shu.md#numpy.median "mention")shu'z&#x20;
+[#numpy.median](tong-ji-han-shu.md#numpy.median "mention")数组中位数
+
+[#numpy.mean](tong-ji-han-shu.md#numpy.mean "mention")数组算术平均值，可以加轴
+
+[#numpy.average](tong-ji-han-shu.md#numpy.average "mention")加权平均值，可以加轴
 
 </details>
 
