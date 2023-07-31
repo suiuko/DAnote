@@ -153,3 +153,27 @@ print(num1)
 | partition(a, kth\[, axis, kind, order])    | 指定一个数，对数组进行分区                                            |
 | argpartition(a, kth\[, axis, kind, order]) | 可以通过关键字 kind 指定算法沿着指定轴对数组进行分区                            |
 
+```python
+import numpy as np
+
+# 复数排序
+com1 = np.sort_complex([5,3,6,2,1])
+print(com1)
+com2 = np.sort_complex([1 + 2j, 2 - 1j, 3 - 2j, 3 - 3j, 3 + 5j])
+print(com2)
+>>> [1.+0.j 2.+0.j 3.+0.j 5.+0.j 6.+0.j]
+>>> [1.+2.j 2.-1.j 3.-3.j 3.-2.j 3.+5.j]
+
+
+a = np.array([3,4,2,1])
+a1 = np.partition(a,3)
+# 将数组 a 中所有元素（包括重复元素）从小到大排列，
+#3 表示的是排序数组索引为 3 的数字，比该数字小的排在该数字前面，
+#比该数字大的排在该数字的后面
+print(a1)
+a2 = np.partition(a,(1,3)) # 小于 1 的在前面，大于 3 的在后面，1 和 3 之间在中间
+print(a2)
+
+>>> [2 1 3 4]
+>>> [1 2 3 4]
+```
