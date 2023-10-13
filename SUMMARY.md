@@ -6,9 +6,9 @@
 
 * [matplotlib](matplotlib/matplotlib.md)
 
-## numpy
+## ⚽ numpy
 
-* [🐦 directory 目录](numpy/directory-mu-lu.md)
+* [directory 目录](numpy/directory-mu-lu.md)
 * [对象](numpy/dui-xiang.md)
 * [数据类型](numpy/shu-ju-lei-xing.md)
 * [数组属性](numpy/shu-zu-shu-xing.md)
@@ -33,6 +33,6 @@
     * [统计函数](numpy/ji-ben-cao-zuo/han-shu/tong-ji-han-shu.md)
     * [排序、条件筛选函数](numpy/ji-ben-cao-zuo/han-shu/pai-xu-tiao-jian-shai-xuan-han-shu.md)
 
-## pandas
+## 🏀 pandas
 
-* [Page 2](pandas/page-2.md)
+* [PDF](pandas/pdf.md)

@@ -1,4 +1,4 @@
-# 🐦 directory 目录
+# directory 目录
 
 ## basic
 
