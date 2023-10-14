@@ -8,6 +8,7 @@
 
 ## ⚽ numpy
 
+* [前言](numpy/qian-yan.md)
 * [directory 目录](numpy/directory-mu-lu.md)
 * [对象](numpy/dui-xiang.md)
 * [数据类型](numpy/shu-ju-lei-xing.md)
@@ -35,4 +36,4 @@
 
 ## 🏀 pandas
 
-* [PDF](pandas/pdf.md)
+* [前言](pandas/qian-yan.md)
